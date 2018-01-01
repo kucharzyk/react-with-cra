@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@types/fetch-mock": "^5.12.2",
-    "@types/whatwg-fetch": "^0.0.33",
     "enzyme": "3.3.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
