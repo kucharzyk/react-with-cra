@@ -12,6 +12,7 @@ This project is still work in progress
 - Spring Boot 2
 - React
 - Maven
+- Yarn
 
 ## Prerequisites
 
@@ -35,4 +36,11 @@ mvnw clean package
 
 ```text
 java -jar shardis-web/target/shardis-web-0.0.1-SNAPSHOT.jar
+```
+
+## Running react dev server
+
+```text
+cd shardis-frontend
+yarn run start
 ```
