@@ -30,3 +30,9 @@ git clone https://github.com/shardis/shardis.git
 ```text
 mvnw clean package
 ```
+
+## Running project
+
+```text
+java -jar shardis-web/target/shardis-web-0.0.1-SNAPSHOT.jar
+```
