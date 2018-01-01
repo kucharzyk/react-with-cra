@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@types/fetch-mock": "^5.12.2",
+    "@types/whatwg-fetch": "^0.0.33",
     "enzyme": "3.3.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-scripts-ts": "2.8.0"
+    "react-scripts-ts": "2.8.0",
+    "whatwg-fetch": "2.0.3"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -20,7 +23,8 @@
     "@types/jest": "22.0.0",
     "@types/node": "8.5.2",
     "@types/react": "16.0.31",
-    "@types/react-dom": "16.0.3"
+    "@types/react-dom": "16.0.3",
+    "fetch-mock": "5.13.1"
   },
   "proxy": {
     "/api": {
