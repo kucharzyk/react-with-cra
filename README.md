@@ -5,7 +5,9 @@
 
 ## Notes
 
-This project is still work in progress
+This project is still work in progress.
+
+I'm just playing with react.
 
 ## Technologies used
 - Java 9

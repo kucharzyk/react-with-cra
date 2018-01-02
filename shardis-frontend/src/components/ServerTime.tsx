@@ -10,22 +10,18 @@ interface State {
 
 class ServerTime extends React.Component<Props, State> {
 
-    private isMounted: false;
-
     componentDidMount(): void {
         Promise.all(['/api/sample/date', '/api/sample/datetime'].map(url => fetch(url).then(res => res.json())))
             .then(values => {
-                if (this.isMounted) {
+                try {
                     this.setState({
                         date: new Date(values[0]),
                         datetime: new Date(values[1])
                     });
+                } catch {
+                    // unmounted
                 }
             });
-    }
-
-    componentWillUnmount(): void {
-        this.isMounted = false;
     }
 
     render() {
