@@ -10,7 +10,7 @@ This project is still work in progress.
 I'm just playing with react.
 
 ## Technologies used
-- Java 9
+- Kotlin
 - Spring Boot 2
 - React
 - Maven
@@ -18,7 +18,7 @@ I'm just playing with react.
 
 ## Prerequisites
 
-- JDK9 (at least) is required
+- JDK8 or newer is required
 - Maven and Node.js and not required
 
  
