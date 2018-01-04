@@ -1,5 +1,5 @@
-import * as React from "react";
-import {StatelessComponent} from "react";
+import * as React from 'react';
+import { StatelessComponent } from 'react';
 
 const logo = require('./logo.svg');
 
@@ -10,4 +10,4 @@ const Header: StatelessComponent = () => (
   </div>
 );
 
-export default Header
+export default Header;
