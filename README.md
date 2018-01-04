@@ -37,8 +37,16 @@ mvnw clean package
 ## Running project
 
 ```text
+mvnw spring-boot:run
+```
+or 
+
+```text
+mvnw clean package
 java -jar shardis-web/target/shardis-web-0.0.1-SNAPSHOT.jar
 ```
+
+
 
 ## Running react dev server
 
