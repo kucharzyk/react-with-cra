@@ -48,9 +48,9 @@ mvnw clean package
 java -jar shardis-web/target/shardis-web-0.0.1-SNAPSHOT.jar
 ```
 
+## Running react dev server 
 
-
-## Running react dev server
+Before running react server start backend application
 
 ```text
 cd shardis-frontend
