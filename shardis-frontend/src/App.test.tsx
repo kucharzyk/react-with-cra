@@ -16,7 +16,9 @@ describe('App', () => {
       status: 200,
       body: new Date()
     });
+
     const div = document.createElement('div');
+
     ReactDOM.render(<App/>, div);
   });
 

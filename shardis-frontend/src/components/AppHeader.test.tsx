@@ -2,23 +2,23 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as enzyme from 'enzyme';
 
-import Header from './Header';
-import {create} from 'react-test-renderer';
+import AppHeader from './AppHeader';
+import { create } from 'react-test-renderer';
 
-describe('Header', () => {
+describe('AppHeader', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Header/>, div);
+    ReactDOM.render(<AppHeader/>, div);
   });
 
   it('renders correctly', () => {
-    const tree = create(<Header/>).toJSON();
+    const tree = create(<AppHeader/>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders the correct text', () => {
-    const hello = enzyme.shallow(<Header/>);
+    const hello = enzyme.shallow(<AppHeader/>);
     expect(hello.find('h2').text()).toEqual('Welcome to React');
   });
 
