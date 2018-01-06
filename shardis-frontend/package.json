@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "antd": "3.1.0",
+    "immutable": "3.7.4",
+    "jquery": "3.2.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
+    "react-router-dom": "4.2.2",
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
@@ -19,10 +22,12 @@
     "@types/enzyme": "3.1.6",
     "@types/enzyme-adapter-react-16": "1.0.1",
     "@types/fetch-mock": "5.12.2",
+    "@types/history": "4.6.2",
     "@types/jest": "22.0.1",
     "@types/node": "8.5.7",
     "@types/react": "16.0.34",
     "@types/react-dom": "16.0.3",
+    "@types/react-router-dom": "4.2.3",
     "@types/react-test-renderer": "16.0.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
