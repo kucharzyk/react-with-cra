@@ -4,19 +4,18 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.http.HttpHeaders
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
+import org.springframework.http.MediaType
 import org.springframework.test.context.junit4.SpringRunner
-import org.springframework.test.web.reactive.server.WebTestClient
+import org.springframework.test.web.servlet.MockMvc
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 
 @RunWith(SpringRunner::class)
-@SpringBootTest
-@AutoConfigureWebTestClient
+@WebMvcTest(value = [(IndexController::class)], secure = false)
 class IndexControllerTest {
 
     @Autowired
-    lateinit var webTestClient: WebTestClient
+    lateinit var mockMvc: MockMvc
 
     @Test
     fun index() {
@@ -43,15 +42,10 @@ class IndexControllerTest {
     }
 
     private fun getHtml(url: String): String? {
-        val responseBody = webTestClient.get()
-            .uri(url)
-            .header(HttpHeaders.CONTENT_TYPE, "text/html")
-            .exchange()
-            .expectStatus().isOk
-            .expectBody(String::class.java)
-            .returnResult()
-            .responseBody
-
+        val request = MockMvcRequestBuilders.get(url).accept(MediaType.TEXT_HTML)
+        val result = mockMvc.perform(request).andReturn()
+        Assert.assertEquals("Status must be OK",200, result.response.status)
+        val responseBody = result.response.contentAsString
         Assert.assertNotNull("Html should be returned", responseBody)
         return responseBody
     }

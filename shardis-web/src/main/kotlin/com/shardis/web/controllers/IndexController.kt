@@ -18,4 +18,5 @@ class IndexController(@Value("classpath:/static/index.html") private val indexHt
 
     @GetMapping("/about")
     fun about() = indexHtml
+
 }
