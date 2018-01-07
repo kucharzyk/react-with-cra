@@ -45,7 +45,7 @@ class IndexControllerTest {
     private fun getHtml(url: String): String? {
         val responseBody = webTestClient.get()
             .uri(url)
-            .header(HttpHeaders.CONTENT_TYPE, "application/json")
+            .header(HttpHeaders.CONTENT_TYPE, "text/html")
             .exchange()
             .expectStatus().isOk
             .expectBody(String::class.java)
