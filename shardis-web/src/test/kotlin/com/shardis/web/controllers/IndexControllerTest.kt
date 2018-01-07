@@ -36,7 +36,9 @@ class IndexControllerTest {
     }
 
     private fun assertHtmlIsCorrect(html: String?) {
+
         html?.let {
+            System.err.println(html)
             Assert.assertTrue("Html should be correct", it.contains("""<div id="root"></div>"""))
         }
     }
@@ -44,7 +46,10 @@ class IndexControllerTest {
     private fun getHtml(url: String): String? {
         val request = MockMvcRequestBuilders.get(url).accept(MediaType.TEXT_HTML)
         val result = mockMvc.perform(request).andReturn()
-        Assert.assertEquals("Status must be OK",200, result.response.status)
+        (result.response.forwardedUrl)?.let {
+            return getHtml(it)
+        }
+        Assert.assertEquals("Status $url must be OK", 200, result.response.status)
         val responseBody = result.response.contentAsString
         Assert.assertNotNull("Html should be returned", responseBody)
         return responseBody

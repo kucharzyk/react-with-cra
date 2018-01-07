@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping
 class IndexController {
 
     @GetMapping("")
-    fun index() = "index.html"
+    fun index() = "/index.html"
 
     @GetMapping("/home")
-    fun home() = "index.html"
+    fun home() = "/index.html"
 
     @GetMapping("/about")
-    fun about() = "index.html"
+    fun about() = "/index.html"
 
 }
