@@ -8,8 +8,14 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/")
-class MainController(@param:Value("classpath:/static/index.html") private val indexHtml: Resource) {
+class IndexController(@Value("classpath:/static/index.html") private val indexHtml: Resource) {
 
     @GetMapping("/")
     fun index() = indexHtml
+
+    @GetMapping("/home")
+    fun home() = indexHtml
+
+    @GetMapping("/about")
+    fun about() = indexHtml
 }
