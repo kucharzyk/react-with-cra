@@ -5,21 +5,20 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.http.HttpHeaders
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
+import org.springframework.http.MediaType
 import org.springframework.test.context.junit4.SpringRunner
-import org.springframework.test.web.reactive.server.WebTestClient
+import org.springframework.test.web.servlet.MockMvc
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import java.time.LocalDate
 import java.time.LocalDateTime
 
 @RunWith(SpringRunner::class)
-@SpringBootTest
-@AutoConfigureWebTestClient
+@WebMvcTest(value = [(SampleController::class)], secure = false)
 class SampleControllerTest {
 
     @Autowired
-    lateinit var webTestClient: WebTestClient
+    lateinit var mockMvc: MockMvc
 
     @Autowired
     lateinit var objectMapper: ObjectMapper
@@ -33,13 +32,12 @@ class SampleControllerTest {
             currentDateString.matches(Regex("""^"\d{4}-\d{2}-\d{2}"$"""))
         )
 
-        webTestClient.get()
-            .uri("/api/sample/date")
-            .header(HttpHeaders.CONTENT_TYPE, "application/json")
-            .exchange()
-            .expectStatus().isOk
-            .expectBody()
-            .json(currentDateString)
+        val request = MockMvcRequestBuilders.get("/api/sample/date").accept(MediaType.APPLICATION_JSON)
+        val result = mockMvc.perform(request).andReturn()
+        Assert.assertEquals("Status must be OK", 200, result.response.status)
+        val responseBody = result.response.contentAsString
+        Assert.assertNotNull("Html should be returned", responseBody)
+        Assert.assertEquals("JSON must be correct", currentDateString, responseBody)
     }
 
     @Test
@@ -51,22 +49,16 @@ class SampleControllerTest {
             currentDateTimeString.matches(Regex("""^"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+"$"""))
         )
 
-        val dateFromRest: String? = webTestClient.get()
-            .uri("/api/sample/datetime")
-            .header(HttpHeaders.CONTENT_TYPE, "application/json")
-            .exchange()
-            .expectStatus().isOk
-            .expectBody(String::class.java)
-            .returnResult()
-            .responseBody
+        val request = MockMvcRequestBuilders.get("/api/sample/datetime").accept(MediaType.APPLICATION_JSON)
+        val result = mockMvc.perform(request).andReturn()
+        Assert.assertEquals("Status must be OK", 200, result.response.status)
+        val responseBody = result.response.contentAsString
+        Assert.assertNotNull("Html should be returned", responseBody)
 
-        Assert.assertNotNull(dateFromRest)
-        dateFromRest?.let {
-            Assert.assertTrue(
-                "date from rest [$it] must be in format [yyyy-MM-dd'T'HH:mm:ss.SSS]",
-                it.matches(Regex("""^"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+"$"""))
-            )
-        }
+        Assert.assertTrue(
+            "date from rest [$responseBody] must be in format [yyyy-MM-dd'T'HH:mm:ss.SSS]",
+            responseBody.matches(Regex("""^"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+"$"""))
+        )
 
     }
 }
