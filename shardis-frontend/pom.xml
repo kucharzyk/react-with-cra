@@ -30,7 +30,7 @@
                         </goals>
                         <phase>generate-resources</phase>
                         <configuration>
-                            <nodeVersion>v8.9.3</nodeVersion>
+                            <nodeVersion>v9.3.0</nodeVersion>
                             <yarnVersion>v1.3.2</yarnVersion>
                         </configuration>
                     </execution>
