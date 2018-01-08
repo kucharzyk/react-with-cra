@@ -26,19 +26,19 @@ class IndexControllerTest {
 
     @Test
     fun home() {
-        val html = getHtml("/")
+        val html = getHtml("/home")
         assertHtmlIsCorrect(html)
     }
 
     @Test
     fun about() {
-        val html = getHtml("/")
+        val html = getHtml("/about")
         assertHtmlIsCorrect(html)
     }
 
     private fun assertHtmlIsCorrect(html: String?) {
         html?.let {
-            Assert.assertTrue("Html should be correct", it.contains("""<div id="root"></div>"""))
+            Assert.assertTrue("Html \n\n $html \n\nshould be correct", it.contains("""<div id="root"></div>"""))
         }
     }
 
