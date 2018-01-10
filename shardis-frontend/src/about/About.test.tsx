@@ -1,18 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import Home from './Home';
 import { create } from 'react-test-renderer';
+import About from './About';
 
-describe('Home', () => {
+describe('About', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Home/>, div);
+    ReactDOM.render(<About/>, div);
   });
 
   it('renders correctly', () => {
-    const tree = create(<Home/>).toJSON();
+    const tree = create(<About/>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

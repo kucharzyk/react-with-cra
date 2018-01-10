@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader renders correctly 1`] = `
+<div
+  className="ant-layout-header"
+  style={
+    Object {
+      "padding": 0,
+    }
+  }
+>
+  <div
+    className="App-header"
+  >
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+      style={
+        Object {
+          "float": "left",
+        }
+      }
+    />
+    <h2
+      style={
+        Object {
+          "float": "left",
+        }
+      }
+    >
+      Welcome to React
+    </h2>
+    <div
+      style={
+        Object {
+          "clear": "both",
+        }
+      }
+    />
+  </div>
+</div>
+`;

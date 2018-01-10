@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppMenu renders correctly 1`] = `
+<div
+  className="ant-layout"
+>
+  <div
+    className="ant-layout"
+  >
+    <div
+      className="ant-layout-header"
+      style={
+        Object {
+          "padding": 0,
+        }
+      }
+    >
+      <div
+        className="App-header"
+      >
+        <img
+          alt="logo"
+          className="App-logo"
+          src="logo.svg"
+          style={
+            Object {
+              "float": "left",
+            }
+          }
+        />
+        <h2
+          style={
+            Object {
+              "float": "left",
+            }
+          }
+        >
+          Welcome to React
+        </h2>
+        <div
+          style={
+            Object {
+              "clear": "both",
+            }
+          }
+        />
+      </div>
+    </div>
+    <ul
+      aria-activedescendant=""
+      className="ant-menu ant-menu-light ant-menu-root ant-menu-horizontal"
+      onKeyDown={[Function]}
+      role="menu"
+      style={Object {}}
+      tabIndex="0"
+    >
+      <li
+        aria-disabled={undefined}
+        aria-selected={false}
+        className="ant-menu-item"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={Object {}}
+        title={undefined}
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <i
+            className="anticon anticon-app"
+          />
+          Main Page
+        </a>
+      </li>
+      <li
+        aria-disabled={undefined}
+        aria-selected={false}
+        className="ant-menu-item"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={Object {}}
+        title={undefined}
+      >
+        <a
+          href="/home"
+          onClick={[Function]}
+        >
+          <i
+            className="anticon anticon-app"
+          />
+          Home
+        </a>
+      </li>
+      <li
+        aria-disabled={undefined}
+        aria-selected={false}
+        className="ant-menu-item"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={Object {}}
+        title={undefined}
+      >
+        <a
+          href="/about"
+          onClick={[Function]}
+        >
+          <i
+            className="anticon anticon-app"
+          />
+          About
+        </a>
+      </li>
+      <li
+        aria-disabled={undefined}
+        aria-selected={false}
+        className="ant-menu-item"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={Object {}}
+        title={undefined}
+      >
+        <a
+          href="/time"
+          onClick={[Function]}
+        >
+          <i
+            className="anticon anticon-app"
+          />
+          Time
+        </a>
+      </li>
+      <li
+        aria-disabled={undefined}
+        aria-selected={false}
+        className="ant-menu-item"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="menuitem"
+        style={Object {}}
+        title={undefined}
+      >
+        <a
+          href="/404"
+          onClick={[Function]}
+        >
+          <i
+            className="anticon anticon-app"
+          />
+          404
+        </a>
+      </li>
+    </ul>
+    <div
+      className="ant-layout-content"
+      style={
+        Object {
+          "margin": "0 10px",
+        }
+      }
+    >
+      <div
+        style={Object {}}
+      >
+        <div
+          className=""
+          style={undefined}
+        >
+          <div
+            className="ant-breadcrumb"
+            style={
+              Object {
+                "margin": "16px 0",
+              }
+            }
+          >
+            <span>
+              <span
+                className="ant-breadcrumb-link"
+              >
+                App
+              </span>
+              <span
+                className="ant-breadcrumb-separator"
+              >
+                /
+              </span>
+            </span>
+            <span>
+              <span
+                className="ant-breadcrumb-link"
+              >
+                location
+              </span>
+              <span
+                className="ant-breadcrumb-separator"
+              >
+                /
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MainLayout"
+        style={
+          Object {
+            "background": "#fff",
+            "minHeight": 360,
+            "padding": 10,
+          }
+        }
+      >
+        <div
+          className="Home"
+        >
+          <h2>
+            This is Home component
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ant-layout-footer"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Shardis ©2018
+    </div>
+  </div>
+</div>
+`;
