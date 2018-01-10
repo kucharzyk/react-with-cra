@@ -2,17 +2,14 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { create } from 'react-test-renderer';
 import MainLayout from './MainLayout';
-import { Route, Router, Switch} from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { StaticRouter } from 'react-router-dom';
 
 describe('MainLayout', () => {
 
   const LayoutWithRouter = () => (
-    <Router history={createBrowserHistory()}>
-      <Switch>
-        <Route path={'/'} component={MainLayout}/>
-      </Switch>
-    </Router>
+    <StaticRouter location={'/'} context={{}}>
+      <MainLayout/>
+    </StaticRouter>
   );
 
   it('renders without crashing', () => {
