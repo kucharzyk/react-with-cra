@@ -2,11 +2,12 @@ import * as React from 'react';
 
 import { Icon, Menu } from 'antd';
 import { Link } from 'react-router-dom';
+import { RouteComponentProps, withRouter } from 'react-router';
 
-class AppMenu extends React.Component {
+class AppMenu extends React.Component<RouteComponentProps<{}  >> {
   render() {
     return (
-      <Menu mode="horizontal">
+      <Menu mode="horizontal" defaultSelectedKeys={[this.props.location.pathname]}>
         <Menu.Item key="/">
           <Link to={'/'}><Icon type="app"/>Main Page</Link>
         </Menu.Item>
@@ -27,4 +28,4 @@ class AppMenu extends React.Component {
   }
 }
 
-export default AppMenu;
+export default withRouter(AppMenu);

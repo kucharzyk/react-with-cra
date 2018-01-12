@@ -56,8 +56,8 @@ exports[`MainLayout renders correctly 1`] = `
     >
       <li
         aria-disabled={undefined}
-        aria-selected={false}
-        className="ant-menu-item"
+        aria-selected={true}
+        className="ant-menu-item ant-menu-item-selected"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
