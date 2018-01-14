@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { List, Spin } from 'antd';
 
 interface Props {
 }
@@ -38,19 +37,16 @@ class ServerTime extends React.Component<Props, State> {
 
   render() {
     if (!this.state) {
-      return <Spin size="large"/>;
+      return <div/>;
     } else {
       const data = [
         `${this.state.source} date: ${this.state.date.toLocaleDateString()}`,
         `${this.state.source} time: ${this.state.datetime.toLocaleTimeString()}`
       ];
       return (
-        <List
-          header={<h2>Data from {this.state.source}:</h2>}
-          bordered={true}
-          dataSource={data}
-          renderItem={(item: string) => (<List.Item>{item}</List.Item>)}
-        />
+        <ul>
+          {data.map(item => <li key={item}>{item}</li>)}
+        </ul>
       );
     }
   }

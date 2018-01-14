@@ -16,7 +16,7 @@ I'm just playing with react.
 - Typescript
 - React
 - Yarn
-- Ant design
+- Material UI
 
 ## Prerequisites
 

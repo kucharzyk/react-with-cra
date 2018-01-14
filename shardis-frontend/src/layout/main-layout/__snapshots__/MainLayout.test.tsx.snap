@@ -1,244 +1,275 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainLayout renders correctly 1`] = `
-<div
-  className="ant-layout"
->
+<div>
   <div
-    className="ant-layout"
+    className="App-header"
   >
-    <div
-      className="ant-layout-header"
-      style={
-        Object {
-          "padding": 0,
-        }
-      }
+    <header
+      className="MuiPaper-root-8 MuiPaper-shadow4-14 MuiAppBar-root-1 MuiAppBar-positionStatic-4 MuiAppBar-colorDefault-5"
     >
       <div
-        className="App-header"
+        className="MuiToolbar-root-35 MuiToolbar-gutters-36"
       >
         <img
           alt="logo"
           className="App-logo"
           src="logo.svg"
-          style={
-            Object {
-              "float": "left",
-            }
-          }
         />
         <h2
+          className="MuiTypography-root-37 MuiTypography-title-43 MuiTypography-colorInherit-56"
           style={
             Object {
-              "float": "left",
+              "width": "50%",
             }
           }
         >
-          Welcome to React
+          <span
+            className="app-title"
+          >
+            Welcome to React
+          </span>
         </h2>
         <div
-          style={
-            Object {
-              "clear": "both",
-            }
-          }
-        />
-      </div>
-    </div>
-    <ul
-      aria-activedescendant=""
-      className="ant-menu ant-menu-light ant-menu-root ant-menu-horizontal"
-      onKeyDown={[Function]}
-      role="menu"
-      style={Object {}}
-      tabIndex="0"
-    >
-      <li
-        aria-disabled={undefined}
-        aria-selected={true}
-        className="ant-menu-item ant-menu-item-selected"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={Object {}}
-        title={undefined}
-      >
-        <a
-          href="/"
-          onClick={[Function]}
-        >
-          <i
-            className="anticon anticon-app"
-          />
-          Main Page
-        </a>
-      </li>
-      <li
-        aria-disabled={undefined}
-        aria-selected={false}
-        className="ant-menu-item"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={Object {}}
-        title={undefined}
-      >
-        <a
-          href="/home"
-          onClick={[Function]}
-        >
-          <i
-            className="anticon anticon-app"
-          />
-          Home
-        </a>
-      </li>
-      <li
-        aria-disabled={undefined}
-        aria-selected={false}
-        className="ant-menu-item"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={Object {}}
-        title={undefined}
-      >
-        <a
-          href="/about"
-          onClick={[Function]}
-        >
-          <i
-            className="anticon anticon-app"
-          />
-          About
-        </a>
-      </li>
-      <li
-        aria-disabled={undefined}
-        aria-selected={false}
-        className="ant-menu-item"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={Object {}}
-        title={undefined}
-      >
-        <a
-          href="/time"
-          onClick={[Function]}
-        >
-          <i
-            className="anticon anticon-app"
-          />
-          Time
-        </a>
-      </li>
-      <li
-        aria-disabled={undefined}
-        aria-selected={false}
-        className="ant-menu-item"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="menuitem"
-        style={Object {}}
-        title={undefined}
-      >
-        <a
-          href="/404"
-          onClick={[Function]}
-        >
-          <i
-            className="anticon anticon-app"
-          />
-          404
-        </a>
-      </li>
-    </ul>
-    <div
-      className="ant-layout-content"
-      style={
-        Object {
-          "margin": "0 10px",
-        }
-      }
-    >
-      <div
-        style={Object {}}
-      >
-        <div
-          className=""
-          style={undefined}
+          className="MuiTabs-root-61"
         >
           <div
-            className="ant-breadcrumb"
-            style={
-              Object {
-                "margin": "16px 0",
-              }
-            }
+            className="MuiTabs-flexContainer-62"
           >
-            <span>
-              <span
-                className="ant-breadcrumb-link"
+            <div
+              className="MuiTabs-scrollingContainer-63 MuiTabs-fixed-64"
+              onScroll={[Function]}
+              role="tablist"
+              style={
+                Object {
+                  "marginBottom": 0,
+                }
+              }
+            >
+              <div
+                className="MuiTabs-flexContainer-62"
               >
-                App
-              </span>
-              <span
-                className="ant-breadcrumb-separator"
-              >
-                /
-              </span>
-            </span>
-            <span>
-              <span
-                className="ant-breadcrumb-link"
-              >
-                location
-              </span>
-              <span
-                className="ant-breadcrumb-separator"
-              >
-                /
-              </span>
-            </span>
+                <button
+                  aria-selected={true}
+                  className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76 MuiTab-rootInheritSelected-77"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  style={undefined}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-80"
+                  >
+                    <div
+                      className="MuiTab-labelContainer-81"
+                    >
+                      <span
+                        className="MuiTab-label-82"
+                      >
+                        Main Page
+                      </span>
+                    </div>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-89"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  style={undefined}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-80"
+                  >
+                    <div
+                      className="MuiTab-labelContainer-81"
+                    >
+                      <span
+                        className="MuiTab-label-82"
+                      >
+                        Home
+                      </span>
+                    </div>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-89"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  style={undefined}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-80"
+                  >
+                    <div
+                      className="MuiTab-labelContainer-81"
+                    >
+                      <span
+                        className="MuiTab-label-82"
+                      >
+                        About
+                      </span>
+                    </div>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-89"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  style={undefined}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-80"
+                  >
+                    <div
+                      className="MuiTab-labelContainer-81"
+                    >
+                      <span
+                        className="MuiTab-label-82"
+                      >
+                        Time
+                      </span>
+                    </div>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-89"
+                  />
+                </button>
+                <button
+                  aria-selected={false}
+                  className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="tab"
+                  style={undefined}
+                  tabIndex={0}
+                  type="button"
+                >
+                  <span
+                    className="MuiTab-wrapper-80"
+                  >
+                    <div
+                      className="MuiTab-labelContainer-81"
+                    >
+                      <span
+                        className="MuiTab-label-82"
+                      >
+                        404
+                      </span>
+                    </div>
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-89"
+                  />
+                </button>
+              </div>
+              <div
+                className="MuiTabIndicator-root-86 MuiTabIndicator-colorAccent-87"
+                style={
+                  Object {
+                    "left": 0,
+                    "width": 0,
+                  }
+                }
+              />
+            </div>
           </div>
         </div>
       </div>
-      <div
-        className="MainLayout"
-        style={
-          Object {
-            "background": "#fff",
-            "minHeight": 360,
-            "padding": 10,
-          }
-        }
-      >
-        <div
-          className="Home"
-        >
-          <h2>
-            This is Home component
-          </h2>
-        </div>
-      </div>
-    </div>
+    </header>
+  </div>
+  <div
+    className="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9"
+  >
     <div
-      className="ant-layout-footer"
-      style={
-        Object {
-          "textAlign": "center",
-        }
-      }
+      className="Home"
     >
-      Shardis ©2018
+      <h2>
+        This is Home component
+      </h2>
     </div>
+  </div>
+  <div
+    className="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    Shardis ©2018
   </div>
 </div>
 `;

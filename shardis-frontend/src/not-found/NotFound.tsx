@@ -1,15 +1,9 @@
 import * as React from 'react';
 import { StatelessComponent } from 'react';
-import { Col, Row } from 'antd';
 
 const NotFound: StatelessComponent = () => (
   <div className="NotFound">
     <h2>This is NotFound component</h2>
-    <Row>
-      <Col xs={0} sm={4} md={6} lg={8} xl={10}>Col1</Col>
-      <Col xs={24} sm={16} md={12} lg={8} xl={4}>Col2</Col>
-      <Col xs={0} sm={4} md={6} lg={8} xl={10}>Col3</Col>
-    </Row>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.

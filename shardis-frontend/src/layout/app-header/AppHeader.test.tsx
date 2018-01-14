@@ -4,22 +4,29 @@ import * as enzyme from 'enzyme';
 
 import AppHeader from './AppHeader';
 import { create } from 'react-test-renderer';
+import { StaticRouter } from 'react-router';
 
 describe('AppHeader', () => {
 
+  const AppHeaderWithRouter = () => (
+    <StaticRouter location={'/'} context={{}}>
+      <AppHeader/>
+    </StaticRouter>
+  );
+
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<AppHeader/>, div);
+    ReactDOM.render(<AppHeaderWithRouter/>, div);
   });
 
   it('renders correctly', () => {
-    const tree = create(<AppHeader/>).toJSON();
+    const tree = create(<AppHeaderWithRouter/>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it('renders the correct text', () => {
-    const hello = enzyme.shallow(<AppHeader/>);
-    expect(hello.find('h2').text()).toEqual('Welcome to React');
+    const header = enzyme.render(<AppHeaderWithRouter/>);
+    expect(header.find('.app-title').text()).toEqual('Welcome to React');
   });
 
 });
