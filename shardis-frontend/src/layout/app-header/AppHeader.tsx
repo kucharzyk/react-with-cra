@@ -7,6 +7,7 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import { RouteComponentProps, withRouter } from 'react-router';
+import Hidden from 'material-ui/Hidden';
 
 const logo = require('./logo.svg');
 
@@ -32,16 +33,18 @@ const AppHeader: StatelessComponent<RouteComponentProps<{}>> = (props) => (
         <Typography type="title" color="inherit" style={{width: '50%'}}>
           <span className="app-title">Welcome to React</span>
         </Typography>
-        <Tabs value={getActiveMenuIndex(props.location.pathname)}>
-          <Tab label="Main Page" onClick={() => props.history.push('/')}/>
-          <Tab label="Home" onClick={() => props.history.push('/home')}/>
-          <Tab label="About" onClick={() => props.history.push('/about')}/>
-          <Tab label="Time" onClick={() => props.history.push('/time')}/>
-          <Tab label="404" onClick={() => props.history.push('/404')}/>
-        </Tabs>
+        <Hidden smDown={true}>
+          <Tabs value={getActiveMenuIndex(props.location.pathname)}>
+            <Tab label="Main Page" onClick={() => props.history.push('/')}/>
+            <Tab label="Home" onClick={() => props.history.push('/home')}/>
+            <Tab label="About" onClick={() => props.history.push('/about')}/>
+            <Tab label="Time" onClick={() => props.history.push('/time')}/>
+            <Tab label="404" onClick={() => props.history.push('/404')}/>
+          </Tabs>
+        </Hidden>
       </Toolbar>
     </AppBar>
   </div>
 );
 
-export default withRouter(AppHeader);
+export default withRouter((AppHeader));
