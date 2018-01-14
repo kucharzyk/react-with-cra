@@ -4,15 +4,15 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { Route, Router, Switch } from 'react-router-dom';
 import MainLayout from '../layout/main-layout/MainLayout';
 import createMuiTheme from 'material-ui/styles/createMuiTheme';
-import purple from 'material-ui/colors/purple';
-import green from 'material-ui/colors/green';
+import indigo from 'material-ui/colors/indigo';
+import blue from 'material-ui/colors/blue';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Reboot from 'material-ui/Reboot';
 
 const theme = createMuiTheme({
   palette: {
-    primary: purple,
-    secondary: green,
+    primary: indigo,
+    secondary: blue,
   },
 });
 

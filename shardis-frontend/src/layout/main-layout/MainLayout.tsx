@@ -1,17 +1,25 @@
 import * as React from 'react';
 import ServerTime from '../../server-time/ServerTime';
-import AppHeader from '../app-header/AppHeader';
 import Home from '../../home/Home';
 import About from '../../about/About';
-
-import { Route, Switch } from 'react-router-dom';
 import NotFound from '../../not-found/NotFound';
+import withStyles from 'material-ui/styles/withStyles';
+import { WithStyles } from 'material-ui';
+import { Theme } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
+import AppHeader from '../app-header/AppHeader';
+import { Route, Switch } from 'react-router';
 
-class MainLayout extends React.Component {
+const styles = (theme: Theme) => ({
+  root: {
+    padding: theme.spacing.unit
+  },
+});
+
+class MainLayout extends React.Component<{} & WithStyles<'root'>> {
   render() {
     return (
-      <div>
+      <div className={this.props.classes.root}>
         <AppHeader/>
         <Paper>
           <Switch>
@@ -28,4 +36,4 @@ class MainLayout extends React.Component {
   }
 }
 
-export default MainLayout;
+export default withStyles(styles)<{}>(MainLayout);
