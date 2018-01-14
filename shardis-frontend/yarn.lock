@@ -6000,6 +6000,10 @@ type-is@~1.6.15:
     media-typer "0.3.0"
     mime-types "~2.1.15"
 
+typeface-roboto-multilang@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/typeface-roboto-multilang/-/typeface-roboto-multilang-1.0.0.tgz#b5282fe5856a6bd907070ad3454c667d0121bda2"
+
 typescript@~2.5.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.5.3.tgz#df3dcdc38f3beb800d4bc322646b04a3f6ca7f0d"
