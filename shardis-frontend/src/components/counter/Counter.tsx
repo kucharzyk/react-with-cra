@@ -12,8 +12,8 @@ const Counter: StatelessComponent<Props> = (props) => (
   <div className="Counter">
     <h2>Count is: {props.counter}</h2>
     <div>
-      <Button onClick={props.onDecrement}>-</Button>
-      <Button onClick={props.onIncrement}>+</Button>
+      <Button fab={true} color={'accent'} name="dec" onClick={props.onDecrement}>-</Button>
+      <Button fab={true} color={'accent'} name="inc" onClick={props.onIncrement}>+</Button>
     </div>
   </div>
 );

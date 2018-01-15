@@ -10,4 +10,37 @@ describe('Counter', () => {
     expect(toJson(shallowComponent)).toMatchSnapshot();
   });
 
+  it('works as expected', () => {
+    const incFunction = jest.fn();
+    const decFunction = jest.fn();
+    const shallowComponent = createShallow()(
+      (
+        <Counter
+          counter={1}
+          onIncrement={incFunction}
+          onDecrement={decFunction}
+        />
+      )
+    );
+
+    expect(shallowComponent.find('h2').text()).toBe('Count is: 1');
+
+    shallowComponent.setProps({counter: 42});
+
+    expect(shallowComponent.find('h2').text()).toBe('Count is: 42');
+
+    expect(incFunction).not.toBeCalled();
+    expect(decFunction).not.toBeCalled();
+
+    shallowComponent.find('[name="inc"]').simulate('click');
+
+    expect(incFunction).toBeCalled();
+    expect(decFunction).not.toBeCalled();
+
+    shallowComponent.find('[name="dec"]').simulate('click');
+
+    expect(incFunction).toBeCalled();
+    expect(decFunction).toBeCalled();
+  });
+
 });
