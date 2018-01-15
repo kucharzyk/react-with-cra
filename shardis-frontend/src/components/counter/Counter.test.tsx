@@ -2,6 +2,7 @@ import * as React from 'react';
 import Counter from './Counter';
 import createShallow from 'material-ui/test-utils/createShallow';
 import toJson from 'enzyme-to-json';
+import 'jest-enzyme';
 
 describe('Counter', () => {
 
@@ -23,11 +24,11 @@ describe('Counter', () => {
       )
     );
 
-    expect(shallowComponent.find('h2').text()).toBe('Count is: 1');
+    expect(shallowComponent.find('h2')).toHaveText('Count is: 1');
 
     shallowComponent.setProps({counter: 42});
 
-    expect(shallowComponent.find('h2').text()).toBe('Count is: 42');
+    expect(shallowComponent.find('h2')).toHaveText('Count is: 42');
 
     expect(incFunction).not.toBeCalled();
     expect(decFunction).not.toBeCalled();

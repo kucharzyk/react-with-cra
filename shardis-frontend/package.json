@@ -9,7 +9,6 @@
     "react-redux": "5.0.6",
     "react-router-dom": "4.2.2",
     "redux": "3.7.2",
-    "redux-mock-store": "1.4.0",
     "typeface-roboto-multilang": "1.0.0",
     "whatwg-fetch": "2.0.3"
   },
@@ -38,7 +37,9 @@
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.0",
     "fetch-mock": "5.13.1",
-    "react-scripts-ts": "2.12.0"
+    "jest-enzyme": "4.0.2",
+    "react-scripts-ts": "2.12.0",
+    "redux-mock-store": "1.4.0"
   },
   "proxy": {
     "/api": {
