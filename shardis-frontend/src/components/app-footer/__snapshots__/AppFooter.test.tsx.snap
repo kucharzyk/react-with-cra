@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppFooter renders correctly 1`] = `
-<div
-  className="MuiPaper-root-2 MuiPaper-shadow2-6 MuiPaper-rounded-3 AppFooter-root-1"
->
-  Shardis ©2018
-</div>
+exports[`AppFooter renders snapshot 1`] = `
+<AppFooter
+  classes={
+    Object {
+      "root": "AppFooter-root-1",
+    }
+  }
+/>
 `;

@@ -1,252 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppHeader renders correctly 1`] = `
+exports[`AppHeader renders snapshot 1`] = `
 <div
   className="App-header"
 >
-  <header
-    className="MuiPaper-root-9 MuiPaper-shadow4-15 MuiAppBar-root-2 MuiAppBar-positionStatic-5 MuiAppBar-colorDefault-6"
+  <WithStyles(AppBar)
+    color="default"
+    position="static"
   >
-    <div
-      className="MuiToolbar-root-36 MuiToolbar-gutters-37"
-    >
+    <WithStyles(Toolbar)>
       <img
         alt="logo"
         className="App-logo"
         src="logo.svg"
       />
-      <h2
-        className="MuiTypography-root-38 MuiTypography-title-44 MuiTypography-colorInherit-57"
+      <WithStyles(Typography)
+        color="inherit"
+        type="title"
       >
         <span
           className="app-title"
         >
           Welcome to React
         </span>
-      </h2>
-      <div
-        className="MuiTabs-root-62"
-        style={
-          Object {
-            "marginLeft": "1em",
-          }
-        }
+      </WithStyles(Typography)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={true}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={false}
+        xsUp={false}
       >
-        <div
-          className="MuiTabs-flexContainer-63"
-        >
-          <div
-            className="MuiTabs-scrollingContainer-64 MuiTabs-fixed-65"
-            onScroll={[Function]}
-            role="tablist"
-            style={
-              Object {
-                "marginBottom": 0,
-              }
+        <WithStyles(Tabs)
+          style={
+            Object {
+              "marginLeft": "1em",
             }
-          >
-            <div
-              className="MuiTabs-flexContainer-63"
-            >
-              <button
-                aria-selected={true}
-                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77 MuiTab-rootInheritSelected-78"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                style={undefined}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-81"
-                >
-                  <div
-                    className="MuiTab-labelContainer-82"
-                  >
-                    <span
-                      className="MuiTab-label-83"
-                    >
-                      Main Page
-                    </span>
-                  </div>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-90"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                style={undefined}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-81"
-                >
-                  <div
-                    className="MuiTab-labelContainer-82"
-                  >
-                    <span
-                      className="MuiTab-label-83"
-                    >
-                      Home
-                    </span>
-                  </div>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-90"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                style={undefined}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-81"
-                >
-                  <div
-                    className="MuiTab-labelContainer-82"
-                  >
-                    <span
-                      className="MuiTab-label-83"
-                    >
-                      About
-                    </span>
-                  </div>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-90"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                style={undefined}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-81"
-                >
-                  <div
-                    className="MuiTab-labelContainer-82"
-                  >
-                    <span
-                      className="MuiTab-label-83"
-                    >
-                      Time
-                    </span>
-                  </div>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-90"
-                />
-              </button>
-              <button
-                aria-selected={false}
-                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
-                disabled={false}
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="tab"
-                style={undefined}
-                tabIndex={0}
-                type="button"
-              >
-                <span
-                  className="MuiTab-wrapper-81"
-                >
-                  <div
-                    className="MuiTab-labelContainer-82"
-                  >
-                    <span
-                      className="MuiTab-label-83"
-                    >
-                      404
-                    </span>
-                  </div>
-                </span>
-                <span
-                  className="MuiTouchRipple-root-90"
-                />
-              </button>
-            </div>
-            <div
-              className="MuiTabIndicator-root-87 MuiTabIndicator-colorAccent-88"
-              style={
-                Object {
-                  "left": 0,
-                  "width": 0,
-                }
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+          }
+          value={0}
+        >
+          <WithStyles(Tab)
+            label="Main Page"
+            onClick={[Function]}
+          />
+          <WithStyles(Tab)
+            label="Home"
+            onClick={[Function]}
+          />
+          <WithStyles(Tab)
+            label="About"
+            onClick={[Function]}
+          />
+          <WithStyles(Tab)
+            label="Time"
+            onClick={[Function]}
+          />
+          <WithStyles(Tab)
+            label="404"
+            onClick={[Function]}
+          />
+        </WithStyles(Tabs)>
+      </Hidden>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
 </div>
 `;

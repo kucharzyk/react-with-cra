@@ -1,18 +1,13 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { create } from 'react-test-renderer';
 import AppFooter from './AppFooter';
+import createShallow from 'material-ui/test-utils/createShallow';
+import toJson from 'enzyme-to-json';
 
 describe('AppFooter', () => {
 
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<AppFooter/>, div);
-  });
-
-  it('renders correctly', () => {
-    const tree = create(<AppFooter/>).toJSON();
-    expect(tree).toMatchSnapshot();
+  it('renders snapshot', () => {
+    const shallowComponent = createShallow()(<AppFooter/>);
+    expect(toJson(shallowComponent)).toMatchSnapshot();
   });
 
 });

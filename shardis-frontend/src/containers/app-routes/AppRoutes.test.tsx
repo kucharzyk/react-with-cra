@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { StatelessComponent } from 'react';
-import * as ReactDOM from 'react-dom';
-import { create } from 'react-test-renderer';
 import AppRoutes from './AppRoutes';
-import { StaticRouter } from 'react-router-dom';
+import createShallow from 'material-ui/test-utils/createShallow';
+import toJson from 'enzyme-to-json';
 import StoreState from '../../types/StoreState';
-import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import { StaticRouter } from 'react-router';
+import configureStore from 'redux-mock-store';
 
 describe('AppRoutes', () => {
 
@@ -27,14 +27,9 @@ describe('AppRoutes', () => {
     );
   });
 
-  it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<WrappedComponent/>, div);
-  });
-
-  it('renders correctly', () => {
-    const tree = create(<WrappedComponent/>).toJSON();
-    expect(tree).toMatchSnapshot();
+  it('renders snapshot', () => {
+    const shallowComponent = createShallow({untilSelector: 'AppRoutes'})(<WrappedComponent/>);
+    expect(toJson(shallowComponent)).toMatchSnapshot();
   });
 
 });
