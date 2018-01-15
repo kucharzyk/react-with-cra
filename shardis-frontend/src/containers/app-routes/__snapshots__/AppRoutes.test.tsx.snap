@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppRoutes renders correctly 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-shadow2-6 MuiPaper-rounded-3 AppRoutes-root-1"
+>
+  <div
+    className="Home"
+  >
+    <h2>
+      This is Home component
+    </h2>
+    <hr />
+    <div
+      className="Counter"
+    >
+      <h2>
+        Count is: 
+        1
+      </h2>
+      <div>
+        <button
+          className="MuiButtonBase-root-44 MuiButton-root-29"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-31"
+          >
+            -
+          </span>
+          <span
+            className="MuiTouchRipple-root-46"
+          />
+        </button>
+        <button
+          className="MuiButtonBase-root-44 MuiButton-root-29"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          role="button"
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label-31"
+          >
+            +
+          </span>
+          <span
+            className="MuiTouchRipple-root-46"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

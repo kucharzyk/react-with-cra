@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import 'typeface-roboto-multilang/latin-ext.css';
-import App from './app/App';
+import App from './containers/app/App';
 
 ReactDOM.render(
   <App/>,

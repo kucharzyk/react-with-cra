@@ -2,17 +2,17 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { create } from 'react-test-renderer';
-import Home from './Home';
+import Counter from './Counter';
 
-describe('Home', () => {
+describe('Counter', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Home/>, div);
+    ReactDOM.render(<Counter counter={0}/>, div);
   });
 
   it('renders correctly', () => {
-    const tree = create(<Home/>).toJSON();
+    const tree = create(<Counter counter={0}/>).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

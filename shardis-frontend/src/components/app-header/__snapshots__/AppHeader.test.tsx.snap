@@ -5,10 +5,10 @@ exports[`AppHeader renders correctly 1`] = `
   className="App-header"
 >
   <header
-    className="MuiPaper-root-8 MuiPaper-shadow4-14 MuiAppBar-root-1 MuiAppBar-positionStatic-4 MuiAppBar-colorDefault-5"
+    className="MuiPaper-root-9 MuiPaper-shadow4-15 MuiAppBar-root-2 MuiAppBar-positionStatic-5 MuiAppBar-colorDefault-6"
   >
     <div
-      className="MuiToolbar-root-35 MuiToolbar-gutters-36"
+      className="MuiToolbar-root-36 MuiToolbar-gutters-37"
     >
       <img
         alt="logo"
@@ -16,12 +16,7 @@ exports[`AppHeader renders correctly 1`] = `
         src="logo.svg"
       />
       <h2
-        className="MuiTypography-root-37 MuiTypography-title-43 MuiTypography-colorInherit-56"
-        style={
-          Object {
-            "width": "50%",
-          }
-        }
+        className="MuiTypography-root-38 MuiTypography-title-44 MuiTypography-colorInherit-57"
       >
         <span
           className="app-title"
@@ -30,13 +25,18 @@ exports[`AppHeader renders correctly 1`] = `
         </span>
       </h2>
       <div
-        className="MuiTabs-root-61"
+        className="MuiTabs-root-62"
+        style={
+          Object {
+            "marginLeft": "1em",
+          }
+        }
       >
         <div
-          className="MuiTabs-flexContainer-62"
+          className="MuiTabs-flexContainer-63"
         >
           <div
-            className="MuiTabs-scrollingContainer-63 MuiTabs-fixed-64"
+            className="MuiTabs-scrollingContainer-64 MuiTabs-fixed-65"
             onScroll={[Function]}
             role="tablist"
             style={
@@ -46,11 +46,11 @@ exports[`AppHeader renders correctly 1`] = `
             }
           >
             <div
-              className="MuiTabs-flexContainer-62"
+              className="MuiTabs-flexContainer-63"
             >
               <button
                 aria-selected={true}
-                className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76 MuiTab-rootInheritSelected-77"
+                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77 MuiTab-rootInheritSelected-78"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -69,25 +69,25 @@ exports[`AppHeader renders correctly 1`] = `
                 type="button"
               >
                 <span
-                  className="MuiTab-wrapper-80"
+                  className="MuiTab-wrapper-81"
                 >
                   <div
-                    className="MuiTab-labelContainer-81"
+                    className="MuiTab-labelContainer-82"
                   >
                     <span
-                      className="MuiTab-label-82"
+                      className="MuiTab-label-83"
                     >
                       Main Page
                     </span>
                   </div>
                 </span>
                 <span
-                  className="MuiTouchRipple-root-89"
+                  className="MuiTouchRipple-root-90"
                 />
               </button>
               <button
                 aria-selected={false}
-                className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -106,25 +106,25 @@ exports[`AppHeader renders correctly 1`] = `
                 type="button"
               >
                 <span
-                  className="MuiTab-wrapper-80"
+                  className="MuiTab-wrapper-81"
                 >
                   <div
-                    className="MuiTab-labelContainer-81"
+                    className="MuiTab-labelContainer-82"
                   >
                     <span
-                      className="MuiTab-label-82"
+                      className="MuiTab-label-83"
                     >
                       Home
                     </span>
                   </div>
                 </span>
                 <span
-                  className="MuiTouchRipple-root-89"
+                  className="MuiTouchRipple-root-90"
                 />
               </button>
               <button
                 aria-selected={false}
-                className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -143,25 +143,25 @@ exports[`AppHeader renders correctly 1`] = `
                 type="button"
               >
                 <span
-                  className="MuiTab-wrapper-80"
+                  className="MuiTab-wrapper-81"
                 >
                   <div
-                    className="MuiTab-labelContainer-81"
+                    className="MuiTab-labelContainer-82"
                   >
                     <span
-                      className="MuiTab-label-82"
+                      className="MuiTab-label-83"
                     >
                       About
                     </span>
                   </div>
                 </span>
                 <span
-                  className="MuiTouchRipple-root-89"
+                  className="MuiTouchRipple-root-90"
                 />
               </button>
               <button
                 aria-selected={false}
-                className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -180,25 +180,25 @@ exports[`AppHeader renders correctly 1`] = `
                 type="button"
               >
                 <span
-                  className="MuiTab-wrapper-80"
+                  className="MuiTab-wrapper-81"
                 >
                   <div
-                    className="MuiTab-labelContainer-81"
+                    className="MuiTab-labelContainer-82"
                   >
                     <span
-                      className="MuiTab-label-82"
+                      className="MuiTab-label-83"
                     >
                       Time
                     </span>
                   </div>
                 </span>
                 <span
-                  className="MuiTouchRipple-root-89"
+                  className="MuiTouchRipple-root-90"
                 />
               </button>
               <button
                 aria-selected={false}
-                className="MuiButtonBase-root-84 MuiTab-root-68 MuiTab-rootInherit-76"
+                className="MuiButtonBase-root-85 MuiTab-root-69 MuiTab-rootInherit-77"
                 disabled={false}
                 onBlur={[Function]}
                 onClick={[Function]}
@@ -217,25 +217,25 @@ exports[`AppHeader renders correctly 1`] = `
                 type="button"
               >
                 <span
-                  className="MuiTab-wrapper-80"
+                  className="MuiTab-wrapper-81"
                 >
                   <div
-                    className="MuiTab-labelContainer-81"
+                    className="MuiTab-labelContainer-82"
                   >
                     <span
-                      className="MuiTab-label-82"
+                      className="MuiTab-label-83"
                     >
                       404
                     </span>
                   </div>
                 </span>
                 <span
-                  className="MuiTouchRipple-root-89"
+                  className="MuiTouchRipple-root-90"
                 />
               </button>
             </div>
             <div
-              className="MuiTabIndicator-root-86 MuiTabIndicator-colorAccent-87"
+              className="MuiTabIndicator-root-87 MuiTabIndicator-colorAccent-88"
               style={
                 Object {
                   "left": 0,

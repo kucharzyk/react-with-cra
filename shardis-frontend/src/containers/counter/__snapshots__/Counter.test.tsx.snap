@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter renders correctly 1`] = `
+<div
+  className="Counter"
+>
+  <h2>
+    Count is: 
+    1
+  </h2>
+  <div>
+    <button
+      className="MuiButtonBase-root-16 MuiButton-root-1"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label-3"
+      >
+        -
+      </span>
+      <span
+        className="MuiTouchRipple-root-18"
+      />
+    </button>
+    <button
+      className="MuiButtonBase-root-16 MuiButton-root-1"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label-3"
+      >
+        +
+      </span>
+      <span
+        className="MuiTouchRipple-root-18"
+      />
+    </button>
+  </div>
+</div>
+`;
