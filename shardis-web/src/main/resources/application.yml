@@ -2,7 +2,3 @@ logging:
   level:
     org.springframework: info
     com.shardis: debug
-server:
-  error:
-    whitelabel:
-      enabled: false

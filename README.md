@@ -12,6 +12,7 @@ I'm just playing with react.
 ## Technologies used
 - Kotlin
 - Spring Boot 2
+- Webflux
 - Maven
 - Typescript
 - React
