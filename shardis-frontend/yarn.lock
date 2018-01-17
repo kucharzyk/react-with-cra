@@ -78,7 +78,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-transition-group@2.0.6":
+"@types/react-transition-group@2.0.6", "@types/react-transition-group@^2.0.6":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/react-transition-group/-/react-transition-group-2.0.6.tgz#8903fa2cf540ba454461590bff811a787889617c"
   dependencies:
@@ -1246,12 +1246,6 @@ css-selector-tokenizer@^0.7.0:
 css-vendor@^0.3.8:
   version "0.3.8"
   resolved "https://registry.yarnpkg.com/css-vendor/-/css-vendor-0.3.8.tgz#6421cfd3034ce664fe7673972fd0119fc28941fa"
-  dependencies:
-    is-in-browser "^1.0.2"
-
-css-vendor@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/css-vendor/-/css-vendor-1.0.1.tgz#98454355cc6169c0955dcf08c69cf51e49bb0a04"
   dependencies:
     is-in-browser "^1.0.2"
 
@@ -3480,12 +3474,6 @@ jss-vendor-prefixer@^7.0.0:
   dependencies:
     css-vendor "^0.3.8"
 
-jss-vendor-prefixer@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/jss-vendor-prefixer/-/jss-vendor-prefixer-8.0.0.tgz#5ce6275bf63c1af2a0b7164c3ecdb68dd7bb1d22"
-  dependencies:
-    css-vendor "^1.0.0"
-
 jss@^9.3.2, jss@^9.3.3:
   version "9.5.1"
   resolved "https://registry.yarnpkg.com/jss/-/jss-9.5.1.tgz#c869f38cdc44a32f4425fe007ea46b8891536326"
@@ -3756,11 +3744,12 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-material-ui@1.0.0-beta.28:
-  version "1.0.0-beta.28"
-  resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.28.tgz#dd78553ea2de2b028699fe9dad4c880a2e10f670"
+material-ui@1.0.0-beta.29:
+  version "1.0.0-beta.29"
+  resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.29.tgz#21ddf110d7aae4a6582584fc10ce948f144b1f2b"
   dependencies:
     "@types/jss" "^9.3.0"
+    "@types/react-transition-group" "^2.0.6"
     babel-runtime "^6.26.0"
     brcast "^3.0.1"
     classnames "^2.2.5"
@@ -3773,7 +3762,7 @@ material-ui@1.0.0-beta.28:
     jss-global "^3.0.0"
     jss-nested "^6.0.1"
     jss-props-sort "^6.0.0"
-    jss-vendor-prefixer "^8.0.0"
+    jss-vendor-prefixer "^7.0.0"
     keycode "^2.1.9"
     lodash "^4.2.0"
     normalize-scroll-left "^0.1.2"

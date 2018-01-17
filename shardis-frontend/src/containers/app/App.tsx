@@ -2,6 +2,10 @@ import * as React from 'react';
 import { StatelessComponent } from 'react';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { Route, Router, Switch } from 'react-router-dom';
+
+import createMuiTheme from 'material-ui/styles/createMuiTheme';
+import indigo from 'material-ui/colors/indigo';
+import blue from 'material-ui/colors/blue';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Reboot from 'material-ui/Reboot';
 import AppLayout from '../app-layout/AppLayout';
@@ -9,9 +13,21 @@ import StoreState from '../../types/StoreState';
 import { createStore } from 'redux';
 import { counter } from '../../reducers';
 import { Provider } from 'react-redux';
-import createMuiTheme from 'material-ui/styles/createMuiTheme';
 
-const theme = createMuiTheme();
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: indigo[300],
+      main: indigo[500],
+      dark: indigo[700],
+    },
+    secondary: {
+      light: blue[300],
+      main: blue[500],
+      dark: blue[700],
+    }
+  },
+});
 
 const store = createStore<StoreState>(counter, {
   counter: 1
