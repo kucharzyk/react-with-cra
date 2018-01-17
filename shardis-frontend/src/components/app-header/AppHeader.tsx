@@ -8,13 +8,13 @@ import Typography from 'material-ui/Typography';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import { RouteComponentProps, withRouter } from 'react-router';
 import Hidden from 'material-ui/Hidden';
-import { Theme } from 'material-ui/styles';
+import { StyleRulesCallback, Theme } from 'material-ui/styles';
 import withStyles from 'material-ui/styles/withStyles';
 import { WithStyles } from 'material-ui';
 
 const logo = require('./logo.svg');
 
-const styles = (theme: Theme) => ({
+const styles: StyleRulesCallback<'root'> = (theme: Theme) => ({
   root: {},
 });
 

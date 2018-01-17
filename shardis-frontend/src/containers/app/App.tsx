@@ -1,49 +1,24 @@
 import * as React from 'react';
 import { StatelessComponent } from 'react';
-import createBrowserHistory from 'history/createBrowserHistory';
-import { Route, Router, Switch } from 'react-router-dom';
+import { StyleRulesCallback, Theme } from 'material-ui/styles';
+import withStyles from 'material-ui/styles/withStyles';
+import { WithStyles } from 'material-ui';
+import AppHeader from '../../components/app-header/AppHeader';
+import AppRoutes from '../app-routes/AppRoutes';
+import AppFooter from '../../components/app-footer/AppFooter';
 
-import createMuiTheme from 'material-ui/styles/createMuiTheme';
-import indigo from 'material-ui/colors/indigo';
-import blue from 'material-ui/colors/blue';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Reboot from 'material-ui/Reboot';
-import AppLayout from '../app-layout/AppLayout';
-import StoreState from '../../types/StoreState';
-import { createStore } from 'redux';
-import { counter } from '../../reducers';
-import { Provider } from 'react-redux';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: indigo[300],
-      main: indigo[500],
-      dark: indigo[700],
-    },
-    secondary: {
-      light: blue[300],
-      main: blue[500],
-      dark: blue[700],
-    }
+const styles: StyleRulesCallback<'root'> = (theme: Theme) => ({
+  root: {
+    padding: theme.spacing.unit
   },
 });
 
-const store = createStore<StoreState>(counter, {
-  counter: 1
-});
-
-const App: StatelessComponent = () => (
-  <Provider store={store}>
-    <MuiThemeProvider theme={theme}>
-      <Reboot/>
-      <Router history={createBrowserHistory()}>
-        <Switch>
-          <Route path={'/'} component={AppLayout}/>
-        </Switch>
-      </Router>
-    </MuiThemeProvider>
-  </Provider>
+const App: StatelessComponent<{} & WithStyles<'root'>> = (props) => (
+  <div className={props.classes.root}>
+    <AppHeader/>
+    <AppRoutes/>
+    <AppFooter/>
+  </div>
 );
 
-export default App;
+export default withStyles(styles)<{}>(App);

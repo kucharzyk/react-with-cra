@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { StatelessComponent } from 'react';
-import App from './App';
+import * as fetchMock from 'fetch-mock';
 import createShallow from 'material-ui/test-utils/createShallow';
-import toJson from 'enzyme-to-json';
 import StoreState from '../../types/StoreState';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
+import ServerTime from './ServerTime';
 
-describe('App', () => {
+describe('ServerTime', () => {
 
   let WrappedComponent: StatelessComponent;
 
@@ -22,15 +22,32 @@ describe('App', () => {
     WrappedComponent = () => (
       <Provider store={store}>
         <StaticRouter location={'/'} context={{}}>
-          <App/>
+          <ServerTime/>
         </StaticRouter>
       </Provider>
     );
   });
 
-  it('renders snapshot', () => {
-    const shallowComponent = createShallow({untilSelector: 'App'})(<WrappedComponent/>);
-    expect(toJson(shallowComponent)).toMatchSnapshot();
+  it('renders without crashing', () => {
+
+    fetchMock.reset();
+
+    fetchMock.mock('/api/sample/date', {
+      status: 200,
+      body: new Date('1410-07-15')
+    });
+
+    fetchMock.mock('/api/sample/datetime', {
+      status: 200,
+      body: new Date('1410-07-15T12:00:00.000Z')
+    });
+
+    const shallowComponent = createShallow({untilSelector: 'ServerTime'})(<WrappedComponent/>);
+
+    shallowComponent.update();
+
+    expect(fetchMock.calls().matched.length).toBe(2);
+
   });
 
 });

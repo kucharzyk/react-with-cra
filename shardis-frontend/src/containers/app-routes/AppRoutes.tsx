@@ -6,11 +6,11 @@ import About from '../../components/about/About';
 import NotFound from '../../components/not-found/NotFound';
 import withStyles from 'material-ui/styles/withStyles';
 import { WithStyles } from 'material-ui';
-import { Theme } from 'material-ui/styles';
+import { StyleRulesCallback, Theme } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import { Route, Switch } from 'react-router';
 
-const styles = (theme: Theme) => ({
+const styles: StyleRulesCallback<'root'> = (theme: Theme) => ({
   root: {
     padding: theme.spacing.unit
   },

@@ -2,10 +2,10 @@ import * as React from 'react';
 import { StatelessComponent } from 'react';
 import withStyles from 'material-ui/styles/withStyles';
 import { WithStyles } from 'material-ui';
-import { Theme } from 'material-ui/styles';
+import { StyleRulesCallback, Theme } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 
-const styles = (theme: Theme) => ({
+const styles: StyleRulesCallback<'root'> = (theme: Theme) => ({
   root: {
     textAlign: 'center',
     padding: theme.spacing.unit
