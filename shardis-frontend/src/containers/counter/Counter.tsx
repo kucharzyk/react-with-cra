@@ -5,7 +5,7 @@ import * as actions from '../../actions/';
 
 export function mapStateToProps({counter}: StoreState) {
   return {
-    counter: counter
+    count: counter.count
   };
 }
 

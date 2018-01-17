@@ -1,9 +1,7 @@
 import { createStore } from 'redux';
-import { counter } from './reducers';
 import StoreState from './types/StoreState';
+import reducer from './reducer';
 
-const store = createStore<StoreState>(counter, {
-  counter: 1
-});
+const store = createStore<StoreState>(reducer);
 
 export default store;

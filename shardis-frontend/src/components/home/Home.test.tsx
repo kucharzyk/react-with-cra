@@ -13,10 +13,9 @@ describe('Home', () => {
   let WrappedComponent: StatelessComponent;
 
   beforeEach(() => {
-    const mockStore = configureStore<StoreState>();
-    const store = mockStore({
-      counter: 1
-    });
+
+    const mockStore = configureStore<Partial<StoreState>>();
+    const store = mockStore({});
 
     WrappedComponent = () => (
       <Provider store={store}>

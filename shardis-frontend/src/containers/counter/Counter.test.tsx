@@ -15,7 +15,9 @@ describe('Counter', () => {
   beforeEach(() => {
     const mockStore = configureStore<StoreState>();
     const store = mockStore({
-      counter: 1
+      counter: {
+        count: 1
+      }
     });
 
     WrappedComponent = () => (

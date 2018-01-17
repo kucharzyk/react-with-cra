@@ -7,7 +7,7 @@ import 'jest-enzyme';
 describe('Counter', () => {
 
   it('renders snapshot', () => {
-    const shallowComponent = createShallow()(<Counter counter={1}/>);
+    const shallowComponent = createShallow()(<Counter count={1}/>);
     expect(toJson(shallowComponent)).toMatchSnapshot();
   });
 
@@ -17,7 +17,7 @@ describe('Counter', () => {
     const shallowComponent = createShallow()(
       (
         <Counter
-          counter={1}
+          count={1}
           onIncrement={incFunction}
           onDecrement={decFunction}
         />
@@ -26,7 +26,7 @@ describe('Counter', () => {
 
     expect(shallowComponent.find('h2')).toHaveText('Count is: 1');
 
-    shallowComponent.setProps({counter: 42});
+    shallowComponent.setProps({count: 42});
 
     expect(shallowComponent.find('h2')).toHaveText('Count is: 42');
 
