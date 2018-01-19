@@ -1,9 +1,9 @@
 import { applyMiddleware, createStore, Middleware } from 'redux';
 import StoreState from './types/StoreState';
-import reducer from './reducer';
 import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
 import { isDev } from './env';
 import { createLogger } from 'redux-logger';
+import reducers from './reducers';
 
 const getMiddleware: (() => Middleware[]) = () => {
   if (isDev) {
@@ -19,6 +19,6 @@ const getMiddleware: (() => Middleware[]) = () => {
   }
 };
 
-const store = createStore<StoreState>(reducer, composeWithDevTools(applyMiddleware(...getMiddleware())));
+const store = createStore<StoreState>(reducers, composeWithDevTools(applyMiddleware(...getMiddleware())));
 
 export default store;
