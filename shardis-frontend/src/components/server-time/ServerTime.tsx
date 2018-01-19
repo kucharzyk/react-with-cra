@@ -23,16 +23,14 @@ class ServerTime extends React.Component<Props, State> {
   componentDidMount(): void {
     Promise.all(['/api/sample/date', '/api/sample/datetime'].map(url => fetch(url).then(res => res.json())))
       .then(values => {
-        try {
           this.setState({
             source: 'server',
             date: new Date(values[0]),
             datetime: new Date(values[1])
           });
-        } catch {
-          // unmounted
-        }
-      });
+      }).catch(reason => {
+        // whatever
+    });
   }
 
   render() {
