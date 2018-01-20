@@ -4,21 +4,20 @@ import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProductio
 import { isDev } from './env';
 import { createLogger } from 'redux-logger';
 import reducers from './reducers';
+import { routerMiddleware } from 'react-router-redux';
+import history from './history';
 
 const getMiddleware: (() => Middleware[]) = () => {
+  const middleware = [routerMiddleware(history)];
   if (isDev) {
-    const logger = createLogger({
+    middleware.push(createLogger({
       diff: true,
       collapsed: true
-    });
-    return [
-      logger
-    ];
-  } else {
-    return [];
+    }));
   }
+  return middleware;
 };
 
-const store = createStore<StoreState>(reducers, composeWithDevTools(applyMiddleware(...getMiddleware())));
+export const store = createStore<StoreState>(reducers, composeWithDevTools(applyMiddleware(...getMiddleware())));
 
 export default store;

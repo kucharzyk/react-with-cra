@@ -71,6 +71,14 @@
     "@types/react" "*"
     "@types/react-router" "*"
 
+"@types/react-router-redux@5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@types/react-router-redux/-/react-router-redux-5.0.11.tgz#5a1ebf7975c60640a524dadf95856ba3c26ddf09"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    redux "^3.7.2"
+
 "@types/react-router@*":
   version "4.0.20"
   resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.20.tgz#3404f54e44bba2239ea4320ea701d86d92f05486"
@@ -5065,6 +5073,14 @@ react-router-dom@4.2.2:
     react-router "^4.2.0"
     warning "^3.0.0"
 
+react-router-redux@5.0.0-alpha.9:
+  version "5.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-5.0.0-alpha.9.tgz#825431516e0e6f1fd93b8807f6bd595e23ec3d10"
+  dependencies:
+    history "^4.7.2"
+    prop-types "^15.6.0"
+    react-router "^4.2.0"
+
 react-router@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-4.2.0.tgz#61f7b3e3770daeb24062dae3eedef1b054155986"
@@ -5270,7 +5286,7 @@ redux-mock-store@1.4.0:
   dependencies:
     lodash.isplainobject "^4.0.6"
 
-redux@3.7.2, redux@^3.6.0:
+redux@3.7.2, redux@^3.6.0, redux@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
