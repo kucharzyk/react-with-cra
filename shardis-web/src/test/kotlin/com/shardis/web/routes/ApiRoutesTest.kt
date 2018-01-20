@@ -7,7 +7,7 @@ import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.http.HttpHeaders
+import org.springframework.http.MediaType
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.test.web.reactive.server.WebTestClient
 import java.time.LocalDate
@@ -35,7 +35,7 @@ class ApiRoutesTest {
 
         webTestClient.get()
             .uri("/api/sample/date")
-            .header(HttpHeaders.CONTENT_TYPE, "application/json")
+            .accept(MediaType.APPLICATION_JSON)
             .exchange()
             .expectStatus().isOk
             .expectBody()
@@ -53,7 +53,7 @@ class ApiRoutesTest {
 
         val dateFromRest: String? = webTestClient.get()
             .uri("/api/sample/datetime")
-            .header(HttpHeaders.CONTENT_TYPE, "application/json")
+            .accept(MediaType.APPLICATION_JSON)
             .exchange()
             .expectStatus().isOk
             .expectBody(String::class.java)
