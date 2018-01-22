@@ -10,7 +10,7 @@ exports[`Counter renders snapshot 1`] = `
   </h2>
   <div>
     <WithStyles(Button)
-      color="accent"
+      color="secondary"
       fab={true}
       name="dec"
       onClick={[Function]}
@@ -18,7 +18,7 @@ exports[`Counter renders snapshot 1`] = `
       -
     </WithStyles(Button)>
     <WithStyles(Button)
-      color="accent"
+      color="secondary"
       fab={true}
       name="inc"
       onClick={[Function]}
