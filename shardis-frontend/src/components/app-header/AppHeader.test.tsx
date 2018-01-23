@@ -4,7 +4,6 @@ import * as enzyme from 'enzyme';
 
 import AppHeader from './AppHeader';
 import { StaticRouter } from 'react-router';
-import toJson from 'enzyme-to-json';
 import createShallow from 'material-ui/test-utils/createShallow';
 
 describe('AppHeader', () => {
@@ -21,7 +20,7 @@ describe('AppHeader', () => {
 
   it('renders snapshot', () => {
     const shallowComponent = createShallow({untilSelector: 'AppHeader'})(<WrappedComponent/>);
-    expect(toJson(shallowComponent)).toMatchSnapshot();
+    expect(shallowComponent).toMatchSnapshot();
   });
 
   it('renders the correct text', () => {

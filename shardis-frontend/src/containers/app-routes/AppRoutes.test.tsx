@@ -2,7 +2,6 @@ import * as React from 'react';
 import { StatelessComponent } from 'react';
 import AppRoutes from './AppRoutes';
 import createShallow from 'material-ui/test-utils/createShallow';
-import toJson from 'enzyme-to-json';
 import StoreState from '../../types/StoreState';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
@@ -27,7 +26,7 @@ describe('AppRoutes', () => {
 
   it('renders snapshot', () => {
     const shallowComponent = createShallow({untilSelector: 'AppRoutes'})(<WrappedComponent/>);
-    expect(toJson(shallowComponent)).toMatchSnapshot();
+    expect(shallowComponent).toMatchSnapshot();
   });
 
 });

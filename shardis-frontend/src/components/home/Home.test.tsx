@@ -6,7 +6,6 @@ import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
 import createShallow from 'material-ui/test-utils/createShallow';
-import toJson from 'enzyme-to-json';
 
 describe('Home', () => {
 
@@ -28,7 +27,7 @@ describe('Home', () => {
 
   it('renders snapshot', () => {
     const shallowComponent = createShallow({untilSelector: 'Home'})(<WrappedComponent/>);
-    expect(toJson(shallowComponent)).toMatchSnapshot();
+    expect(shallowComponent).toMatchSnapshot();
   });
 
 });

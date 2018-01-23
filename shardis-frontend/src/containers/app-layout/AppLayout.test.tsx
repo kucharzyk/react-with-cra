@@ -7,7 +7,6 @@ import configureStore from 'redux-mock-store';
 import StoreState from '../../types/StoreState';
 import { Provider } from 'react-redux';
 import createShallow from 'material-ui/test-utils/createShallow';
-import toJson from 'enzyme-to-json';
 
 describe('AppLayout', () => {
 
@@ -29,7 +28,7 @@ describe('AppLayout', () => {
 
   it('renders snapshot', () => {
     const shallowComponent = createShallow({untilSelector: 'AppLayout'})(<WrappedComponent/>);
-    expect(toJson(shallowComponent)).toMatchSnapshot();
+    expect(shallowComponent).toMatchSnapshot();
   });
 
 });

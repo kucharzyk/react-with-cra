@@ -2,7 +2,6 @@ import * as React from 'react';
 import { StatelessComponent } from 'react';
 import Counter from './Counter';
 import createShallow from 'material-ui/test-utils/createShallow';
-import toJson from 'enzyme-to-json';
 import { StaticRouter } from 'react-router';
 import { Provider } from 'react-redux';
 import StoreState from '../../types/StoreState';
@@ -31,7 +30,7 @@ describe('Counter', () => {
 
   it('renders snapshot', () => {
     const shallowComponent = createShallow({untilSelector: 'Counter'})(<WrappedComponent/>);
-    expect(toJson(shallowComponent)).toMatchSnapshot();
+    expect(shallowComponent).toMatchSnapshot();
   });
 
 });
